@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📰 Fake News Detection AI</h1>
+
+    <form method="POST" action="/predict">
+        <textarea name="news" placeholder="Enter news here..."></textarea><br>{{news_text }}</textarea>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Result: {{ prediction }}</h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

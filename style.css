@@ -1,0 +1,88 @@
+/* Animated gradient background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(-45deg, #ff6a00, #ee0979, #00c6ff, #0072ff);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Glass card */
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+
+    box-shadow: 0 0 25px rgba(0,255,255,0.4);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+/* Title */
+h1 {
+    color: #00ffe5;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px black;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+
+    font-size: 15px;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+
+    transition: 0.3s;
+}
+
+/* Button hover animation */
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px white;
+}
+
+/* Result animation */
+h2 {
+    margin-top: 20px;
+    color: yellow;
+    animation: pop 0.5s ease-in-out;
+}
+
+@keyframes pop {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
